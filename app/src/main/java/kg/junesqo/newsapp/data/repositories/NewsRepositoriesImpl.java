@@ -43,4 +43,165 @@ public class NewsRepositoriesImpl implements NewsRepository {
         });
         return liveData;
     }
+
+    @Override
+    public MutableLiveData<Resource<MainResponse>> getBusinessNews() {
+        liveData.setValue(Resource.loading());
+        api.getBusinessNews(API_KEY,"ru")
+                .enqueue(new Callback<MainResponse>() {
+                    @Override
+                    public void onResponse(Call<MainResponse> call, Response<MainResponse> response) {
+                        if(response.isSuccessful() && response.body()!=null){
+                            liveData.setValue(Resource.success(response.body()));
+                        }else{
+                            liveData.setValue(Resource.error(response.message(),null));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<MainResponse> call, Throwable t) {
+                        liveData.setValue(Resource.error(t.getLocalizedMessage(),null));
+
+                    }
+                });
+        return liveData;
+    }
+
+    @Override
+    public MutableLiveData<Resource<MainResponse>> getEntertainmentNews() {
+        liveData.setValue(Resource.loading());
+        api.getEntertainmentNews(API_KEY,"ru")
+                .enqueue(new Callback<MainResponse>() {
+                    @Override
+                    public void onResponse(Call<MainResponse> call, Response<MainResponse> response) {
+                        if(response.isSuccessful() && response.body()!=null){
+                            liveData.setValue(Resource.success(response.body()));
+                        }else{
+                            liveData.setValue(Resource.error(response.message(),null));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<MainResponse> call, Throwable t) {
+                        liveData.setValue(Resource.error(t.getLocalizedMessage(),null));
+
+                    }
+                });
+        return liveData;
+    }
+
+    @Override
+    public MutableLiveData<Resource<MainResponse>> getGeneralNews() {
+        liveData.setValue(Resource.loading());
+        api.getGeneralNews(API_KEY,"ru")
+                .enqueue(new Callback<MainResponse>() {
+                    @Override
+                    public void onResponse(Call<MainResponse> call, Response<MainResponse> response) {
+                        if(response.isSuccessful() && response.body()!=null){
+                            liveData.setValue(Resource.success(response.body()));
+                        }else{
+                            liveData.setValue(Resource.error(response.message(),null));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<MainResponse> call, Throwable t) {
+                        liveData.setValue(Resource.error(t.getLocalizedMessage(),null));
+
+                    }
+                });
+        return liveData;
+    }
+
+    @Override
+    public MutableLiveData<Resource<MainResponse>> getHealthNews() {
+        liveData.setValue(Resource.loading());
+        api.getHealthNews(API_KEY,"ru")
+                .enqueue(new Callback<MainResponse>() {
+                    @Override
+                    public void onResponse(Call<MainResponse> call, Response<MainResponse> response) {
+                        if(response.isSuccessful() && response.body()!=null){
+                            liveData.setValue(Resource.success(response.body()));
+                        }else{
+                            liveData.setValue(Resource.error(response.message(),null));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<MainResponse> call, Throwable t) {
+                        liveData.setValue(Resource.error(t.getLocalizedMessage(),null));
+
+                    }
+                });
+        return liveData;
+    }
+
+    @Override
+    public MutableLiveData<Resource<MainResponse>> getScienceNews() {
+        liveData.setValue(Resource.loading());
+        api.getScienceNews(API_KEY,"ru")
+                .enqueue(new Callback<MainResponse>() {
+                    @Override
+                    public void onResponse(Call<MainResponse> call, Response<MainResponse> response) {
+                        if(response.isSuccessful() && response.body()!=null){
+                            liveData.setValue(Resource.success(response.body()));
+                        }else{
+                            liveData.setValue(Resource.error(response.message(),null));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<MainResponse> call, Throwable t) {
+                        liveData.setValue(Resource.error(t.getLocalizedMessage(),null));
+
+                    }
+                });
+        return liveData;
+    }
+
+    @Override
+    public MutableLiveData<Resource<MainResponse>> getSportNews() {
+        liveData.setValue(Resource.loading());
+        api.getSportNews(API_KEY,"ru")
+                .enqueue(new Callback<MainResponse>() {
+                    @Override
+                    public void onResponse(Call<MainResponse> call, Response<MainResponse> response) {
+                        if(response.isSuccessful() && response.body()!=null){
+                            liveData.setValue(Resource.success(response.body()));
+                        }else{
+                            liveData.setValue(Resource.error(response.message(),null));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<MainResponse> call, Throwable t) {
+                        liveData.setValue(Resource.error(t.getLocalizedMessage(),null));
+
+                    }
+                });
+        return liveData;
+    }
+
+    @Override
+    public MutableLiveData<Resource<MainResponse>> getTechnologyNews() {
+        liveData.setValue(Resource.loading());
+        api.getTechnologyNews(API_KEY,"ru")
+                .enqueue(new Callback<MainResponse>() {
+                    @Override
+                    public void onResponse(Call<MainResponse> call, Response<MainResponse> response) {
+                        if(response.isSuccessful() && response.body()!=null){
+                            liveData.setValue(Resource.success(response.body()));
+                        }else{
+                            liveData.setValue(Resource.error(response.message(),null));
+                        }
+                    }
+
+                    @Override
+                    public void onFailure(Call<MainResponse> call, Throwable t) {
+                        liveData.setValue(Resource.error(t.getLocalizedMessage(),null));
+
+                    }
+                });
+        return liveData;
+    }
 }

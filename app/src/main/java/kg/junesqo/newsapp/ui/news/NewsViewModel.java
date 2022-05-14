@@ -25,4 +25,33 @@ public class NewsViewModel extends ViewModel {
     public void getTopNews(){
         liveData = repositories.getTopNews();
     }
+
+    public void getBusinessNews() {
+        liveData = repositories.getBusinessNews();
+    }
+
+    public void getEntertainmentNews() {
+        liveData = repositories.getEntertainmentNews();
+    }
+
+    public void getHealthNews() {
+        liveData = repositories.getHealthNews();
+    }
+
+    public void getGeneralNews() {
+        liveData = repositories.getGeneralNews();
+    }
+
+    public void getScienceNews() {
+        liveData = repositories.getScienceNews();
+    }
+
+    public void getSportNews() {
+        liveData = repositories.getSportNews();
+    }
+
+    public void getTechnologyNews() {
+        liveData = repositories.getTechnologyNews();
+    }
+
 }
